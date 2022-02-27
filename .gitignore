@@ -1,5 +1,7 @@
 venv/
-MyDjangoApp/MyDjangoApp/settings.py
+MyDjangoApp/MyDjangoApp/secrets.json
+MyDjangoApp/secrets.json
+secrets.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

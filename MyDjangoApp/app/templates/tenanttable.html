@@ -1,0 +1,90 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Transactions {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
+      <div class="d-block mb-4 mb-md-0">
+          <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+              <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+                <li class="breadcrumb-item"><a href="#"><span class="fas fa-home"></span></a></li>
+                <li class="breadcrumb-item"><a href="#">Papat</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Tenants</li>
+              </ol>
+          </nav>
+          <h2 class="h4">All Tenants Details Brief</h2>
+      </div>
+  </div>
+  <div class="table-settings mb-4">
+      <div class="row align-items-center justify-content-between">
+          <div class="col col-md-6 col-lg-3 col-xl-4">
+              <div class="input-group">
+                  <span class="input-group-text" id="basic-addon2"><span class="fas fa-search"></span></span>
+                  <input type="text" class="form-control" id="exampleInputIconLeft" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
+              </div>
+          </div>
+          <div class="col-4 col-md-2 col-xl-1 ps-md-0 text-right">
+              <div class="btn-group">
+                  <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="icon icon-sm icon-gray pt-1">
+                          <span class="fas fa-cog"></span>
+                      </span>
+                      <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-xs dropdown-menu-end pb-0">
+                      <span class="small ps-3 fw-bold text-dark">Show</span>
+                      <a class="dropdown-item d-flex fw-bold" href="#">10 <span class="icon icon-small ms-auto"><span class="fas fa-check"></span></span></a>
+                      <a class="dropdown-item fw-bold" href="#">20</a>
+                      <a class="dropdown-item fw-bold" href="#">30</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="card card-body shadow-sm table-wrapper table-responsive">
+      <table class="table table-hover">
+          <thead>
+              <tr>
+                  <th>#</th>
+                  <th>Surname</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Email</th>
+                  <th>Contact</th>
+                  <th>Other Contact</th>
+                  <th>House No.</th>
+                  <th>Occupation</th>
+                  <th>National ID</th>
+                  <th>Birthday</th>
+                  <th>Gender</th>
+              </tr>
+          </thead>
+          <tbody>
+              {% for tenant in tenants %}
+            <tr>
+                <td>{{ tenant.id }}</td>
+                <td>{{ tenant.surname }}</td>
+                <td>{{ tenant.firstname }}</td>
+                <td>{{ tenant.lastname }}</td>
+                <td>{{ tenant.email }}</td>
+                <td>{{ tenant.primarycontact }}</td>
+                <td>{{ tenant.othercontact }}</td>
+                <td>{{ tenant.housenumber }}</td>
+                <td>{{ tenant.occupation }}</td>
+                <td>{{ tenant.nationalid }}</td>
+                <td>{{ tenant.birthday }}</td>
+                <td>{{ tenant.gender }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+      </table>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
