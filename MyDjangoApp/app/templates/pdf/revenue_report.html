@@ -1,0 +1,33 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Landlords {% endblock %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
+  <div class="d-block mb-4 mb-md-0">
+          <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+              <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+                <li class="breadcrumb-item"><a href="{% url 'dashboard' %}"><span class="fas fa-home"></span></a></li>
+                <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Papat</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'rev_report' %}">Report</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Revenue</li>
+              </ol>
+          </nav>
+          <h2 class="h4">All Landlords</h2>
+          <p class="mb-0">Papat web analytics dashboard .</p>
+      </div>
+</div>
+
+
+<iframe>
+
+</iframe>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

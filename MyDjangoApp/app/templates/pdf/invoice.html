@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>Landlord Report</title>
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+    <table class="table">
+          <thead>
+             <tr>
+                 <th>#</th >
+                 <th>FIRSTNAME</th>
+                 <th>LASTNAME</th>
+                 <th>NATIONAL ID</th>
+                 <th>EMAIL ADDRESS</th>
+                 <th>CONTACT</th>
+            </tr>
+          </thead>
+    <tbody>
+            {% for landlord in all_landlords %}
+            <tr>
+                <td>PL{{ landlord.id }}</td>
+                <td>{{ landlord.firstname }}</td>
+                <td>{{ landlord.lastname}}</td>
+                <td>{{ landlord.nationalid }}</td>
+                <td>{{ landlord.email }}</td>
+                <td>{{ landlord.primarycontact }}</td>
+            </tr>
+           {% endfor %}
+    </tbody>
+</table>
+    </body>
+</html>
+```
